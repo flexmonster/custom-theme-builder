@@ -11,26 +11,26 @@ To run this application, you will need Node.js and npm. [Get it here](https://do
 ## Installation & Usage
 
  
-###### 1) Clone the sample project: 
+### 1) Clone the sample project:
 
 ```bash
 git clone https://github.com/flexmonster/custom-theme-builder.git && cd custom-theme-builder
 ```
 
-###### 2) Install the dependencies defined in `package.json`: 
+### 2) Install the dependencies defined in `package.json`: 
 
 ```bash
 npm i
 ```
-###### You can adjust the variable values and colors in `flexmonster.less` as desired.
+You can adjust the variable values and colors in `flexmonster.less` as desired.
 
 
-###### 3) Run the project to generate your custom theme: 
+### 3) Run the project to generate your custom theme: 
 
 ```bash
 npm run build
 ```
 
-###### As a result the `generated-theme` folder will be generated containing your custom theme files (`flexmonster.css`, `flexmonster.min.css`). 
+As a result the `generated-theme` folder will be generated containing your custom theme files (`flexmonster.css`, `flexmonster.min.css`). 
 
 You are welcome to use them in your project.

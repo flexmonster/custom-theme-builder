@@ -11,7 +11,7 @@ To run this application, you will need Node.js and npm. [Get it here](https://do
 ###### 1) Clone the sample project: 
 
 ```bash
-git clone https://github.com/VeraDidenko/custom-theme-builder && cd custom-theme-builder
+git clone https://github.com/flexmonster/custom-theme-builder && cd custom-theme-builder
 ```
 
 ###### 2) Install the dependencies defined in `package.json`: 

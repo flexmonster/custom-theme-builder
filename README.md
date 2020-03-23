@@ -1,6 +1,7 @@
 # Custom Theme Builder for Flexmonster Pivot Table & Charts
 [![Flexmonster Pivot Table & Charts](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](https://flexmonster.com)
 Website: www.flexmonster.com
+
 A simple project to help create custom themes for [Flexmonster](https://flexmonster.com)
 
 ## Prerequisites

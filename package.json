@@ -1,0 +1,23 @@
+{
+  "name": "custom-theme-builder",
+  "version": "1.0.0",
+  "description": "A simple project to help create custom themes for Flexmonster",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
+  },
+  "author": "Flexmonster",
+  "license": "MIT",
+  "devDependencies": {
+    "flexmonster": "^2.8.2",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-less": "^4.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-util": "^3.0.8"
+  }
+}

@@ -1,4 +1,7 @@
-# Custom Theme Builder
+# Custom Theme Builder for Flexmonster Pivot Table & Charts
+[![Flexmonster Pivot Table & Charts](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](https://flexmonster.com)
+Website: www.flexmonster.com
+
 A simple project to help create custom themes for [Flexmonster](https://flexmonster.com)
 
 ## Prerequisites
@@ -11,7 +14,7 @@ To run this application, you will need Node.js and npm. [Get it here](https://do
 ###### 1) Clone the sample project: 
 
 ```bash
-git clone https://github.com/VeraDidenko/custom-theme-builder && cd custom-theme-builder
+git clone https://github.com/flexmonster/custom-theme-builder.git && cd custom-theme-builder
 ```
 
 ###### 2) Install the dependencies defined in `package.json`: 

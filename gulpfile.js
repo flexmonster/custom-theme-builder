@@ -1,11 +1,11 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var replace = require('gulp-replace');
-var notify = require('gulp-notify');
-var less = require('gulp-less');
-var cleanCSS = require('gulp-clean-css');
-//var sourcemaps = require('gulp-sourcemaps');
-var rename = require('gulp-rename');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const replace = require('gulp-replace');
+const notify = require('gulp-notify');
+const less = require('gulp-less');
+const cleanCSS = require('gulp-clean-css');
+//const sourcemaps = require('gulp-sourcemaps');
+const rename = require('gulp-rename');
 
 const destination = 'generated-theme/';
 
@@ -14,8 +14,7 @@ gulp.task('compile-css', function () {
         //.pipe(sourcemaps.init())
         .pipe(less().on('error', gutil.log))
         //.pipe(sourcemaps.write())
-        .pipe(gulp.dest(destination))
-        .pipe(notify('CSS compiled'));
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task('adjust-assets', function(){
@@ -23,8 +22,7 @@ gulp.task('adjust-assets', function(){
     .pipe(replace('../assets', function(match) {
       return 'https://cdn.flexmonster.com/theme/assets';
     }))
-    .pipe(gulp.dest(destination))
-    .pipe(notify('Adjusted assets paths'));
+    .pipe(gulp.dest(destination));
 });
 
 gulp.task('minify-css',() => {
@@ -34,7 +32,7 @@ gulp.task('minify-css',() => {
     .pipe(rename({ suffix: ".min" }))
     //.pipe(sourcemaps.write())
     .pipe(gulp.dest(destination))
-    .pipe(notify('CSS minified'));
+    .pipe(notify('Generated theme in '+destination+' folder'));
 });
 
 gulp.task('default', gulp.series(['compile-css', 'adjust-assets', 'minify-css']));

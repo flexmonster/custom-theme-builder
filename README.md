@@ -32,4 +32,5 @@ npm run build
 ```
 
 ###### As a result the `generated-theme` folder will be generated containing your custom theme files (`flexmonster.css`, `flexmonster.min.css`). 
-###### You are welcome to use them in your project.
+
+You are welcome to use them in your project.

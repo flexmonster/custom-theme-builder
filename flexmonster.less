@@ -1,127 +1,355 @@
 ﻿@import "node_modules\flexmonster\theme\flexmonster-base.less";
 
+/*-------------------------------------------------------
+|||||||||||||||||||||||||| FONTS ||||||||||||||||||||||||
+---------------------------------------------------------*/
 @font-family: Arial, sans-serif;
 @font-size: 12px;
 @font-size-mobile: 14px;
 
-/* ===== theme colors ===== */
-/* ===== not used in flexmonster-base.less directly; used in this file to define bg, border and other colors ===== */
-@theme-color: #7FA3D7;
-@theme-color-dark:#345CA1;
-@theme-color-superdark: rgb(29, 52, 92);
-@theme-color-midlight: #94ACDA; //not used
-@theme-color-light: #B2D2F8; //not used
-@theme-color-superlight: rgb(206, 225, 248);
-@theme-color-supersuperlight:rgb(236, 245, 255);
+/*-------------------------------------------------------
+||||||||||||||||||||| THEME COLORS ||||||||||||||||||||||
+---------------------------------------------------------*/
+/* =================== USAGE: ========================== 
+Not used in flexmonster-base.less directly; 
+Used in this file to define bg, border and other colors 
+======================================================== */
+
+/* ======== basic colors, defined for this theme ======= */
+@theme-color: #E9E9E9;
+@theme-color-dark: #DCDCDC;
+@theme-color-superdark: #939393;
+@theme-color-midlight: #E8E8E8;//cdcdcd;
+@theme-color-light: #F5F5F5;//#ebebeb;
+@theme-color-superlight: #f7f7f7;
+@theme-color-supersuperlight: #FFFFFF;
 @theme-color-danger: #F44336;
 
 /* ===== basic grey colors, common for all themes ===== */
 @theme-base-color: #999;
 @theme-base-color-dark: #555;
 @theme-base-color-superdark: #3c3c3c;
-@theme-base-color-midlight: #d5d5d5;//cdcdcd;
-@theme-base-color-light: #e9e9e9;//#ebebeb;
+@theme-base-color-midlight: #d5d5d5; //cdcdcd;
+@theme-base-color-light: #e9e9e9; //#ebebeb;
 @theme-base-color-superlight: #f7f7f7;
 @theme-base-color-supersuperlight: #fbfbfb;
 
-/* ===== text colors ===== */
+/*-------------------------------------------------------
+|||||||||||||||||||||| TEXT COLORS ||||||||||||||||||||||
+---------------------------------------------------------*/
 @theme-text-color: #111;
 @theme-text-color-inverted: #fff;
-@theme-text-color-midlight: #888;
-@theme-text-color-light: @theme-text-color;//#999;
+@theme-text-color-midlight: #555;
+@theme-text-color-light: #999;
 @theme-text-color-superlight: #cecece;
 
-@toolbar-text-color: #888;
-@toolbar-icon-fill-border: @theme-color;
-@toolbar-icon-fill-background: lighten(@theme-color, 30%);
+/*-------------------------------------------------------
+||||||||||||||||||| TOOLBAR STYLES ||||||||||||||||||||||
+---------------------------------------------------------*/
+@toolbar-text-color: @theme-text-color-light;
+@toolbar-background-color: @background-ui-element-base-color;
 
-/* ===== background colors ===== */
+@toolbar-icon-fill-border: @theme-base-color;
+@toolbar-icon-fill-background: @theme-color;
+
+@toolbar-dropdown-background-color: @background-ui-element-base-color;
+@toolbar-dropdown-border: @ui-element-border;
+@toolbar-dropdown-element-hover: @ui-background-light;
+@toolbar-dropdown-element-divider: 1px dotted #dcdcdc;
+
+/*-------------------------------------------------------
+|||||||||||||||||| BACKGROUND COLORS ||||||||||||||||||||
+---------------------------------------------------------*/
 @background-base-color: #fff;
 @background-ui-element-base-color: #fff;
-@ui-background-dark: @theme-color-dark;
-@ui-background: @theme-color;
-@ui-background-light: @theme-color-superlight;
-@ui-background-superlight: @theme-color-supersuperlight;
+@ui-background-dark: @theme-base-color-dark;
+@ui-background: @theme-base-color;
+@ui-background-light: @theme-base-color-superlight;
+@ui-background-superlight: @theme-base-color-supersuperlight;
 
-/* ===== border colors ===== */
-@ui-border-color-dark: @theme-color-dark;
-@ui-border-color: @theme-color;//#999;
-@ui-border-color-light: #f0f0f0;//@theme-color-light;//#d5d5d5;
-@ui-border-color-superlight: @theme-color-superlight;
+/*-------------------------------------------------------
+|||||||||||||||||||| BORDER COLORS ||||||||||||||||||||||
+---------------------------------------------------------*/
+@ui-border-color-dark: @theme-base-color-superdark;
+@ui-border-color: @theme-base-color-dark;
+@ui-border-color-light: @theme-base-color-midlight;
+@ui-border-color-superlight: @theme-base-color-light; 
+
+/*-------------------------------------------------------
+|||||||||||||||||||||||| BORDERS ||||||||||||||||||||||||
+---------------------------------------------------------*/
 @ui-border-dark: 1px solid @ui-border-color-dark;
 @ui-border: 1px solid @ui-border-color;
 @ui-border-light: 1px solid @ui-border-color-light;
 @ui-border-superlight: 1px solid @ui-border-color-superlight;
 
-/* ===== grid ===== */
-@grid-sheet-header-text-color: #999;
-@grid-sheet-header-color: #fff;
-@grid-sheet-header-border-color: #f0f0f0;
-@grid-sheet-header-border: 1px solid @grid-sheet-header-border-color;
-@grid-icon-color: @theme-color;
-@grid-table-header-text-color: @theme-text-color-midlight;
-@grid-table-header-color: @theme-color-supersuperlight;
-@grid-table-header-border-color: #f0f0f0;
-@grid-table-header-border: 1px solid @grid-table-header-border-color;
-@grid-filter-color: @theme-color;
-@grid-filter-color-hover: @theme-color-dark;
-@grid-filter-text-color: #fff;
-@grid-filter-subtext-color: @grid-filter-text-color;
-@grid-filter-icon-color: @grid-filter-text-color;
-@grid-cell-color: @background-base-color;
-@grid-cell-text-color: @theme-text-color;
-@grid-cell-border-color: #f0f0f0;
-@grid-cell-border: 1px solid @grid-cell-border-color;
-@grid-drilldown-link-text-color: #888;
-@grid-selection-canvas-color: rgba(121, 204, 255, 0.2);
-@grid-selection-canvas-border: 2px solid @theme-base-color-light;
-@grid-auto-calculation-bar: #7FA3D7;
+/*-------------------------------------------------------
+||||||||||||||||||| GRID SHEET HEADERS|||||||||||||||||||
+---------------------------------------------------------*/
+@grid-sheet-header-text-color: @theme-text-color-light;
+@grid-sheet-header-color: @theme-color-superlight;
+@grid-sheet-header-border-color: @theme-color-midlight;
+@grid-sheet-header-border-right: 1px solid @grid-sheet-header-border-color;
+@grid-sheet-header-border-bottom: 1px solid @grid-sheet-header-border-color;
 
-/* ===== charts ===== */
+/*-------------------------------------------------------
+||||||||||||||||||||||||| GRID ICONS|||||||||||||||||||||
+---------------------------------------------------------*/
+@grid-icon-color: @theme-color-superdark;
+
+/*-------------------------------------------------------
+|||||||||||||||| GRID TABLE HEADER CELLS|||||||||||||||||
+---------------------------------------------------------*/
+/* ===== table header row ===== */
+@grid-table-header-row-color: @theme-color-superlight;
+@grid-table-header-row-text-color: @theme-text-color;
+@grid-table-header-row-border-color: @theme-color-midlight;
+@grid-table-header-row-border-right: 1px solid @grid-table-header-row-border-color;
+@grid-table-header-row-border-bottom: 1px solid @grid-table-header-row-border-color;
+
+/* ===== table header column ===== */
+@grid-table-header-column-color: @theme-color-superlight;
+@grid-table-header-column-text-color: @theme-text-color;
+@grid-table-header-column-border-color: @theme-color-midlight;
+@grid-table-header-column-border-right: 1px solid @grid-table-header-column-border-color;
+@grid-table-header-column-border-bottom: 1px solid @grid-table-header-column-border-color;
+
+/* ===== table header subtotals row ===== */
+@grid-table-header-total-row-cell-color: @theme-color-superlight;
+@grid-table-header-total-row-cell-text-color: @theme-text-color;
+@grid-table-header-total-row-cell-font-weight: normal;
+@grid-table-header-total-row-cell-border-color: @theme-color-midlight;
+@grid-table-header-total-row-cell-border-right: 1px solid @grid-table-header-total-row-cell-border-color;
+@grid-table-header-total-row-cell-border-bottom: 1px solid @grid-table-header-total-row-cell-border-color;
+
+/* ===== table header subtotals column ===== */
+@grid-table-header-total-column-cell-color: @theme-color-superlight;
+@grid-table-header-total-column-cell-text-color: @theme-text-color;
+@grid-table-header-total-column-cell-font-weight: normal;
+@grid-table-header-total-column-cell-border-color: @theme-color-midlight;
+@grid-table-header-total-column-cell-border-right: 1px solid @grid-table-header-total-column-cell-border-color;
+@grid-table-header-total-column-cell-border-bottom: 1px solid @grid-table-header-total-column-cell-border-color;
+
+/* ===== table header grand total row ===== */
+@grid-table-header-grand-total-row-cell-color: @theme-color-superlight;
+@grid-table-header-grand-total-row-cell-text-color: @theme-text-color;
+@grid-table-header-grand-total-row-cell-font-weight: bold;
+@grid-table-header-grand-total-row-cell-border-color: @theme-color-midlight;
+@grid-table-header-grand-total-row-cell-border-right: 1px solid @grid-table-header-grand-total-row-cell-border-color;
+@grid-table-header-grand-total-row-cell-border-bottom: 1px solid @grid-table-header-grand-total-row-cell-border-color;
+
+/* ===== table header grand total column ===== */
+@grid-table-header-grand-total-column-cell-color: @theme-color-superlight;
+@grid-table-header-grand-total-column-cell-text-color: @theme-text-color;
+@grid-table-header-grand-total-column-cell-font-weight: bold;
+@grid-table-header-grand-total-column-cell-border-color: @theme-color-midlight;
+@grid-table-header-grand-total-column-cell-border-right: 1px solid @grid-table-header-grand-total-column-cell-border-color;
+@grid-table-header-grand-total-column-cell-border-bottom: 1px solid @grid-table-header-grand-total-column-cell-border-color;
+
+/*-------------------------------------------------------
+|||||||||||||||||||| GRID FILTERS |||||||||||||||||||||||
+---------------------------------------------------------*/
+/* ===== grid filter icon, common for all filter header cells ===== */
+@grid-filter-icon-color: @grid-icon-color;
+
+/* ===== table header filters column area ===== */
+@grid-table-header-filter-column-pane-color: @theme-color;
+@grid-table-header-filter-column-pane-text-color: @theme-text-color;
+@grid-table-header-filter-column-pane-border-color: @theme-color-dark;
+@grid-table-header-filter-column-pane-border-bottom: 1px solid @grid-table-header-filter-column-pane-border-color;
+@grid-table-header-filter-column-pane-border-right: 1px solid @grid-table-header-filter-column-pane-border-color;
+
+/* ===== table header column filter cell ===== */
+@grid-table-header-filter-column-cell-color: @theme-color;
+@grid-table-header-filter-column-cell-color-hover: darken(@grid-table-header-filter-column-cell-color, 5%);
+@grid-table-header-filter-column-cell-text-color: @theme-text-color;
+@grid-table-header-filter-column-cell-border-color: @theme-color-dark;
+@grid-table-header-filter-column-cell-border-bottom: 1px solid @grid-table-header-filter-column-cell-border-color;
+@grid-table-header-filter-column-cell-border-right: none;
+
+/* ===== table header row filter cell ===== */
+@grid-table-header-filter-row-cell-color: @theme-color;
+@grid-table-header-filter-row-cell-color-hover: darken(@grid-table-header-filter-row-cell-color, 5%);
+@grid-table-header-filter-row-cell-text-color: @theme-text-color;
+@grid-table-header-filter-row-cell-border-color: @theme-color-dark;
+@grid-table-header-filter-row-cell-border-bottom: 1px solid @grid-table-header-filter-row-cell-border-color;
+@grid-table-header-filter-row-cell-border-right: 1px solid @grid-table-header-filter-row-cell-border-color;
+
+/* ===== report filter cell ===== */
+@grid-report-filter-cell-color: @theme-color;
+@grid-report-filter-subtext-color: #888;
+@grid-report-filter-cell-color-hover: darken(@grid-report-filter-cell-color, 5%);
+
+/* ===== flat table filter cell ===== */
+@grid-flat-table-filter-header-color: @theme-color;
+@grid-flat-table-filter-header-text-color: @theme-text-color;
+@grid-flat-table-filter-header-color-hover: darken(@grid-flat-table-filter-header-color, 5%);
+@grid-flat-table-filter-cell-border-color: @theme-color-dark;
+@grid-flat-table-filter-cell-border-bottom: 1px solid @grid-flat-table-filter-cell-border-color;
+@grid-flat-table-filter-cell-border-right: 1px solid @grid-flat-table-filter-cell-border-color;
+
+/* ===== drill-through table filter cell and empty filter cell styles ===== */
+@grid-table-header-filter-cell-color: @theme-color;
+@grid-table-header-filter-cell-text-color: @theme-text-color;
+@grid-table-header-filter-cell-border-color: @theme-color-dark;
+@grid-table-header-filter-cell-border-bottom: 1px solid @grid-table-header-filter-cell-border-color;
+@grid-table-header-filter-cell-border-right: 1px solid @grid-table-header-filter-cell-border-color;
+
+/* ======== live filtering header ============= */
+@grid-live-filter-color: @theme-color;
+
+/*-------------------------------------------------------
+||||||||||||||||||||||| GRID CELLS ||||||||||||||||||||||
+---------------------------------------------------------*/
+/* ===== general grid cell style ===== */
+@grid-cell-color: @theme-color-supersuperlight;
+@grid-cell-text-color: @theme-text-color;
+@grid-cell-border-color: @theme-color-light;
+@grid-cell-border-right: 1px solid @grid-cell-border-color;
+@grid-cell-border-bottom: 1px solid @grid-cell-border-color;
+
+/* ===== subtotal row grid cell style ===== */
+@grid-total-row-cell-color: @grid-cell-color;
+@grid-total-row-cell-text-color: @theme-text-color;
+@grid-total-row-cell-font-weight: normal;
+@grid-total-row-cell-border-color: @grid-cell-border-color;
+@grid-total-row-cell-border-right: 1px solid @grid-total-row-cell-border-color;
+@grid-total-row-cell-border-bottom: 1px solid @grid-total-row-cell-border-color;
+
+/* ===== subtotal column grid cell style ===== */
+@grid-total-column-cell-color: @grid-cell-color;
+@grid-total-column-cell-text-color: @theme-text-color;
+@grid-total-column-cell-font-weight: normal;
+@grid-total-column-cell-border-color: @grid-cell-border-color;
+@grid-total-column-cell-border-right: 1px solid @grid-total-column-cell-border-color;
+@grid-total-column-cell-border-bottom: 1px solid @grid-total-column-cell-border-color;
+
+/* ===== grand total row grid cell style ===== */
+@grid-grand-total-row-cell-color: @grid-cell-color;
+@grid-grand-total-row-cell-text-color: @theme-text-color;
+@grid-grand-total-row-cell-font-weight: bold;
+@grid-grand-total-row-cell-border-color: @grid-cell-border-color;
+@grid-grand-total-row-cell-border-right: 1px solid @grid-grand-total-row-cell-border-color;
+@grid-grand-total-row-cell-border-bottom: 1px solid @grid-grand-total-row-cell-border-color;
+
+/* ===== grand total column grid cell style ===== */
+@grid-grand-total-column-cell-color: @grid-cell-color;
+@grid-grand-total-column-cell-text-color: @theme-text-color;
+@grid-grand-total-column-cell-font-weight: normal;
+@grid-grand-total-column-cell-border-color: @grid-cell-border-color;
+@grid-grand-total-column-cell-border-right: 1px solid @grid-grand-total-column-cell-border-color;
+@grid-grand-total-column-cell-border-bottom: 1px solid @grid-grand-total-column-cell-border-color;
+
+/* ===== grand total row-column intersection grid cell style ===== */
+@grid-grand-total-row-column-cell-color: @grid-grand-total-row-cell-color;
+@grid-grand-total-row-column-cell-text-color: @theme-text-color;
+@grid-grand-total-row-column-cell-font-weight: bold;
+@grid-grand-total-row-column-cell-border-color: @grid-grand-total-row-cell-border-color;
+@grid-grand-total-row-column-cell-border-right: 1px solid @grid-grand-total-row-column-cell-border-color;
+@grid-grand-total-row-column-cell-border-bottom: 1px solid @grid-grand-total-row-column-cell-border-color;
+
+/*-------------------------------------------------------
+|||||||||||||||||| GRID DATA SHEET ||||||||||||||||||||||
+---------------------------------------------------------*/
+@grid-data-sheet-border-color: @grid-cell-border-color;
+@grid-data-sheet-border-top: none;
+@grid-data-sheet-border-left: none;
+
+/*-------------------------------------------------------
+||||||||||||||| GRID DRILL-THROUGH LINK |||||||||||||||||
+---------------------------------------------------------*/
+@grid-drilldown-link-text-color: #888;
+
+/*-------------------------------------------------------
+|||||||||||||||| GRID SELECTION CANVAS ||||||||||||||||||
+---------------------------------------------------------*/
+@grid-selection-canvas-color: rgba(255, 245, 106, 0.2);
+@grid-selection-canvas-border: 1px solid gainsboro;
+
+/*-------------------------------------------------------
+|||||||||||||||| GRID AUTO CALCULATION BAR ||||||||||||||
+---------------------------------------------------------*/
+@grid-auto-calculation-bar: @theme-color-superdark;
+@grid-auto-calculation-bar-text-color: @background-base-color;
+@grid-auto-calculation-bar-text-results-color: @background-base-color;
+
+/*-------------------------------------------------------
+||||||||||||| GRID RESIZE HANDLE & INDICATOR ||||||||||||
+---------------------------------------------------------*/
+@grid-resize-indicator-color: darken(@theme-color-superdark, 5%);
+@grid-resize-handle-color: darken(@theme-color-superdark, 5%);
+
+/*-------------------------------------------------------
+|||||||||||||||||||||||| CHARTS |||||||||||||||||||||||||
+---------------------------------------------------------*/
 @charts-label-font-size: 14px;
 @charts-axis-font-size: 14px;
 @charts-axis-text-color: @theme-text-color;
 @charts-axis-title-color: @theme-text-color;
+@charts-axis-stroke-color: #cccccc;
+@charts-point-fill-color: #FFFFFF;
 @charts-pie-label-color: @theme-text-color;
 
-/* ===== ui ===== */
-@ui-component-border: @ui-border-light;
+/*-------------------------------------------------------
+|||||||||||||||||||||||||||| UI |||||||||||||||||||||||||
+---------------------------------------------------------*/
+@ui-component-border: 1px solid #D2D2D2;
 @ui-pop-up-border: @ui-border-light;
 @ui-element-border-color: @ui-border-color-light;
 @ui-element-border: @ui-border-light;
-@ui-element-inner-border: @ui-border-light;
+@ui-element-inner-border: @ui-border-superlight;
 
+/* ================= checkbox style ==================== */
+@ui-element-checkbox-color: #FFFFFF;
+@ui-element-checkbox-font-weight: bold;
+
+/* ===================== text style ==================== */
 @ui-element-text-color: @theme-text-color;
 @ui-element-font-size: 14px;
 
-@ui-btn-dark-color-hover: @theme-color-superdark;
-@ui-btn-color-hover: @ui-background-light;//#f2f2f2;
+/* ============== draggable item style ================= */
+@ui-draggable-item-backgound-color: @ui-background-light;
+@ui-draggable-item-text-color: @theme-text-color;
+
+/* ================ button hover colors ================ */
+@ui-btn-dark-color-hover: @theme-base-color-superdark;
+@ui-btn-color-hover: @ui-background-light; //#f2f2f2;
 @ui-btn-color-light-hover: @ui-background-superlight;
 @ui-btn-border-radius: 4px;
 
-@ui-btn-font-size: 14px; 
-@ui-btn-text-color: @theme-color-dark;
+/* ================= button text style ================= */
+@ui-btn-font-size: 14px;
+@ui-btn-text-color: @theme-base-color-superdark;
 @ui-btn-dark-text-color: @theme-text-color-inverted;
-@ui-btn-light-text-color: @theme-text-color-light;
+@ui-btn-light-text-color: @theme-text-color-midlight;
 @ui-btn-toggle-text-color: @theme-text-color-light;
 @ui-btn-toggle-selected-text-color: @ui-element-text-color;
 @ui-btn-toggle-dark-text-color: @ui-element-text-color;
 @ui-btn-toggle-dark-selected-text-color: @theme-text-color-inverted;
 @ui-btn-calc-text-color: @theme-text-color-inverted;
 
-@ui-icon-color: @theme-color;
-@ui-icon-color-dark: @theme-color-dark;
+/* ==================== icon style ===================== */
+@ui-icon-color: @theme-color-superdark;
+@ui-icon-color-dark: @theme-base-color-superdark;
+@ui-alert-icon-color: #FFFFFF;
 
-@ui-label-color-dark: @theme-color-dark;
+/* ====================== label style ================== */
+@ui-label-color-dark: @theme-color-superdark;
 @ui-label-color: @theme-text-color;
 @ui-label-color-light: @theme-text-color-light;
 @ui-label-font-size: 14px;
+
+/* =================== text area style ================= */
 @ui-text-area-color: @ui-element-text-color;
+@ui-text-area-background-color: @theme-color-supersuperlight;
+
+/* ====================== titles style ================= */
 @ui-title-color: @theme-text-color;
 @ui-title-font-size: 24px;
 @ui-title-font-size-smaller: 18px;
 @ui-subtitle-color: @ui-label-color-light;
 @ui-subtitle-font-size: @ui-label-font-size;
 
+/* ====================== prompt style ================= */
 @ui-prompt-color: @theme-text-color-superlight;
 @ui-prompt-icon-color: @ui-border-color-superlight;

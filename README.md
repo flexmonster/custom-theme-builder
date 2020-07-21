@@ -28,7 +28,7 @@ You can adjust the variable values and colors in `flexmonster.less` as desired.
 ### 3) Run the project to generate your custom theme: 
 
 ```bash
-npm run build
+npm start
 ```
 
 As a result the `generated-theme` folder will be generated containing your custom theme files (`flexmonster.css`, `flexmonster.min.css`). 

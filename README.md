@@ -1,36 +1,43 @@
 # Custom Theme Builder for Flexmonster Pivot Table & Charts
-[![Flexmonster Pivot Table & Charts](https://s3.amazonaws.com/flexmonster/github/fm-github-cover.png)](https://flexmonster.com)
+[![Flexmonster Pivot Table & Charts](https://cdn.flexmonster.com/landing.png)](https://flexmonster.com)
 Website: www.flexmonster.com
 
-A simple project to help create custom themes for [Flexmonster](https://flexmonster.com)
+## Flexmonster Pivot Table & Charts
+
+Flexmonster Pivot is a powerful JavaScript tool for interactive web reporting. It allows you to visualize and analyze data from JSON, CSV, SQL, NoSQL, Elasticsearch, and OLAP data sources quickly and conveniently. Flexmonster is designed to integrate seamlessly with any client-side framework and can be easily embedded into your application.
+
+This repository holds the source code for a simple project to help create custom themes for [Flexmonster Pivot Table & Charts](https://flexmonster.com):
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
 
 ## Prerequisites
 
-To run this application, you will need Node.js and npm. [Get it here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if it’s not already installed on your machine.
+To run the theme builder, you will need Node.js and npm. [Get it here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if it’s not already installed on your machine.
 
-## Installation & Usage
+## Installation
 
- 
-### 1) Clone the sample project:
-
-```bash
-git clone https://github.com/flexmonster/custom-theme-builder.git && cd custom-theme-builder
-```
-
-### 2) Install the dependencies defined in `package.json`: 
+1. Download the `.zip` archive with the theme builder or clone it from GitHub with the following command:
 
 ```bash
-npm i
+git clone https://github.com/flexmonster/custom-theme-builder && cd custom-theme-builder
 ```
-You can adjust the variable values and colors in `flexmonster.less` as desired.
 
+2. Install the npm packages described in `package.json`: 
 
-### 3) Run the project to generate your custom theme: 
+```bash
+npm install
+```
+
+## Usage
+
+To create your custom theme, adjust the variable values and colors in `flexmonster.less` as desired.
+
+Then, run the project with the following command to generate CSS files for the theme: 
 
 ```bash
 npm start
 ```
 
-As a result the `generated-theme` folder will be generated containing your custom theme files (`flexmonster.css`, `flexmonster.min.css`). 
-
-You are welcome to use them in your project.
+As a result, the `generated-theme` folder that contains your custom theme files (`flexmonster.css`, `flexmonster.min.css`) will appear. 

@@ -32,12 +32,4 @@ npm install
 
 ## Usage
 
-To create your custom theme, adjust the variable values and colors in `flexmonster.less` as desired.
-
-Then, run the project with the following command to generate CSS files for the theme: 
-
-```bash
-npm start
-```
-
-As a result, the `generated-theme` folder that contains your custom theme files (`flexmonster.css`, `flexmonster.min.css`) will appear. 
+For details on usage, refer to the [Customizing the appearance](https://www.flexmonster.com/doc/customizing-appearance/#new-theme) guide.

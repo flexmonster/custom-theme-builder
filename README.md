@@ -14,7 +14,7 @@ This repository holds the source code for a simple project to help create custom
 
 ## Prerequisites
 
-To run the theme builder, you will need Node.js and npm. [Get it here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if it’s not already installed on your machine.
+To run the theme builder, you will need Node.js and npm. [Get them here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if they're not already installed on your machine.
 
 ## Installation
 

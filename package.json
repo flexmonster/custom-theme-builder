@@ -11,7 +11,7 @@
   "author": "Flexmonster",
   "license": "MIT",
   "devDependencies": {
-    "flexmonster": "^2.8.2",
+    "flexmonster": "latest",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-less": "^4.0.1",

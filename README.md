@@ -32,4 +32,4 @@ npm install
 
 ## Usage
 
-For details on usage, refer to the [Customizing the appearance](https://www.flexmonster.com/doc/customizing-appearance/#new-theme) guide.
+For details on usage, refer to the [Chaning themes](https://www.flexmonster.com/doc/customizing-appearance/#new-theme) guide.

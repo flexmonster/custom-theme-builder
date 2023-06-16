@@ -32,6 +32,10 @@ git clone https://github.com/flexmonster/custom-theme-builder && cd custom-theme
 npm install
 ```
 
+## Usage
+
+See how to create a custom theme using the theme builder: [Adding a custom theme](https://www.flexmonster.com/doc/customizing-appearance/#new-theme).
+
 ## Related Flexmonster docs
 
-- [Changing themes](https://www.flexmonster.com/doc/customizing-appearance/) — learn how to apply a built-in theme or create a custom one using the theme builder.
+- [Changing themes](https://www.flexmonster.com/doc/customizing-appearance/) — learn about themes and styling in Flexmonster.

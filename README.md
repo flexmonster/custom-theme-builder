@@ -37,7 +37,7 @@ npm install
 
 ## Usage
 
-See how to create a custom theme using the theme builder: [Adding a custom theme](https://www.flexmonster.com/doc/customizing-appearance/#new-theme/?r=github).
+See how to create a custom theme using the theme builder: [Adding a custom theme](https://www.flexmonster.com/doc/customizing-appearance#new-theme/?r=github).
 
 ## Related Flexmonster docs
 
